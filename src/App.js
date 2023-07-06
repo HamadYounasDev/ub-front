@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./components/Homepage";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import DestinationListing from "./components/DestinationListing";
+import DestinationDetail from "./components/DestinationDetail";
+import HotelDetail from "./components/HotelDetail";
+import FreelancerDetails from "./components/FreelancerDetails";
+import HotelSelector from "./components/HotelSelector";
+import FreelancerSelector from "./components/FreelancerSelector";
+import { BookingSuccess } from "./components/BookingSuccess";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <header>
+          <Navbar />
+        </header>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/destinations" element={<DestinationListing />} />
+          <Route path="/destination/:id" element={<DestinationDetail />} />
+          <Route path="/hotel/:id" element={<HotelDetail />} />
+          <Route path="/freelancer/:id" element={<FreelancerDetails />} />
+          <Route path="/selecthotel" element={<HotelSelector />} />
+          <Route path="/selectfreelancer" element={<FreelancerSelector />} />
+          <Route path="/bookingSuccess" element={<BookingSuccess   />} />
+        </Routes>
+        <Footer />
+      </div>
   );
-}
+};
 
 export default App;
