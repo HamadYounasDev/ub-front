@@ -10,9 +10,11 @@ import FreelancerDetails from "./components/FreelancerDetails";
 import HotelSelector from "./components/HotelSelector";
 import FreelancerSelector from "./components/FreelancerSelector";
 import { BookingSuccess } from "./components/BookingSuccess";
+import {MyContextProvider} from "./contexts/DestinationDetails";
 
 const App = () => {
   return (
+    <MyContextProvider>
       <div>
         <header>
           <Navbar />
@@ -29,6 +31,7 @@ const App = () => {
         </Routes>
         <Footer />
       </div>
+      </MyContextProvider>
   );
 };
 

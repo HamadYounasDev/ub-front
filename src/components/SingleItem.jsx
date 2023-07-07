@@ -1,9 +1,9 @@
 import React from "react";
 
-const SingleItem = ({handleItemSelection}) => {
+const SingleItem = ({handleItemSelection, data}) => {
   return (
     <>
-    <div onClick={handleItemSelection}>
+    <div onClick={()=>handleItemSelection(data)}>
       <a href="#" class="group">
         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
           <img
