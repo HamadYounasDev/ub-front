@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { MyContext } from "../contexts/DestinationDetails";
+import { MyContext } from "../../contexts/DestinationDetails";
 
 const DestinationDetail = () => {
   const { setDestinationDetails } = useContext(MyContext);

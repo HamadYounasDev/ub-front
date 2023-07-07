@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import HeroBanner from './HeroBanner'
+import HeroBanner from '../Misc/HeroBanner'
 import TopItems from './TopItems'
 import axios from 'axios'
 

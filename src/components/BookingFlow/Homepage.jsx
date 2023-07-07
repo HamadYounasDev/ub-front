@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Hero from "./Hero";
-import About from "./About";
-import Features from "./Features";
-import Gallery from "./Gallery";
-import TopItems from "./TopItems";
+import Hero from "../Misc/Hero";
+import About from "../Misc/About";
+import Features from "../Misc/Features";
+import Gallery from "../Misc/Gallery";
+import TopItems from "../Misc/TopItems";
 import axios from "axios";
 
 const Homepage = () => {
