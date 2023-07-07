@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeroBanner from '../Misc/HeroBanner'
-import TopItems from './TopItems'
 import axios from 'axios'
+import TopItems from '../Misc/TopItems'
 
 const DestinationListing = () => {
   const [destinations, setDestinations] = useState([])

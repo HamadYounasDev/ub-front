@@ -7,27 +7,27 @@ import TopItems from "../Misc/TopItems";
 import axios from "axios";
 
 const Homepage = () => {
+  const [destinations, setDestinations] = useState();
+  const [freelancers, setFreelancers] = useState();
 
-  const [destinations, setDestinations] = useState()
-  const [freelancers, setFreelancers] = useState()
-
-  useEffect(()=>{ 
-    axios.get('http://localhost/ub_back/wp-json/wp/v2/destination?per_page=4')
-    .then((res)=>{
-      setDestinations(res.data)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-    axios.get('http://localhost/ub_back/wp-json/wp/v2/freelancer?per_page=4')
-    .then((res)=>{
-      console.log(res.data)
-      setFreelancers(res.data)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-  },[])
+  useEffect(() => {
+    axios
+      .get("http://localhost/ub_back/wp-json/wp/v2/destination?per_page=4")
+      .then((res) => {
+        setDestinations(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    axios
+      .get("http://localhost/ub_back/wp-json/wp/v2/freelancer?per_page=4")
+      .then((res) => {
+        setFreelancers(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div>
@@ -35,8 +35,8 @@ const Homepage = () => {
       <About />
       <Features />
       <Gallery />
-      <TopItems heading='Top Destinations' data={destinations} />
-      <TopItems heading='Top Freelancers' data={freelancers} />
+      <TopItems heading="Top Destinations" data={destinations} />
+      <TopItems heading="Top Freelancers" data={freelancers} />
     </div>
   );
 };
