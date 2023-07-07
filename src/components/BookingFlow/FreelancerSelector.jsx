@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import SingleItem from "./SingleItem";
-import Modal from "./Modal";
-import { MyContext } from "../contexts/DestinationDetails";
+import Modal from "../Misc/Modal";
+import { MyContext } from "../../contexts/DestinationDetails";
+import SingleItem from "../Misc/SingleItem";
 
 const FreelancerSelector = () => {
   const { selectedHotel, setSelectedFreelancer, destinationDetails, selectedFreelancer } = useContext(MyContext);

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import SingleItem from "./SingleItem";
+import SingleItem from "../Misc/SingleItem";
 import { useNavigate } from "react-router-dom";
-import { MyContext } from "../contexts/DestinationDetails";
+import { MyContext } from "../../contexts/DestinationDetails";
 
 const HotelSelector = () => {
   const { destinationDetails, setSelectedHotel } = useContext(MyContext);
