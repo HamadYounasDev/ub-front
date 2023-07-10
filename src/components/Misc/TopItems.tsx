@@ -8,7 +8,6 @@ const TopItems = ({ data, heading, price, subCat }) => {
   const handleNavigation = (id) => {
     navigate(`/destination/${id}`);
   };
-  console.log('data', data)
   
   return (
     <div>

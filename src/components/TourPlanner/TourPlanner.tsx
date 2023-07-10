@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Modal from "../Misc/Modal";
 import axios from "axios";
+import { MyContext } from "../../contexts/DestinationDetails";
 
 const TourPlanner = () => {
   const [confirmationModal, setConfirmationModal] = useState(false);
   const [fuelPrice, setFuelPrice]= useState(null)
+  const {destinationDetails} = useContext(MyContext)
   const handleTourPlannerSubmit = (data) => {
     setConfirmationModal(true);
   };
@@ -14,6 +16,9 @@ const TourPlanner = () => {
       setFuelPrice(res.data.slice(0,9))
     })
   },[])
+
+  console.log(destinationDetails?.title?.rendered)
+
   return (
     <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 my-10">
       <div className="sm:mx-auto sm:w-full sm:max-w-2xl">
@@ -47,6 +52,26 @@ const TourPlanner = () => {
               <option>4000cc</option>
             </select>
           </div>
+
+
+          <div className="mb-6">
+            <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+              Choosen Destination
+            </label>
+
+            <figure>
+              <img
+                className="h-auto max-w-full rounded-lg w-full"
+                src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
+                alt="image description"
+              />
+              <figcaption className="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">
+                Destination 01
+              </figcaption>
+            </figure>
+          </div>
+
+
           <div className="mb-6">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
               Choosen Hotel
