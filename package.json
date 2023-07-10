@@ -14,9 +14,13 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "typeface": "^0.0.0",
     "typeface-dm-serif-display": "^1.1.13",
     "typeface-jost": "^1.1.13",
+=======
+    "react-transition-group": "^4.4.5",
+>>>>>>> 6a8591d0b3c74da6ad0a4f7a1c170ff00948d6b8
     "web-vitals": "^2.1.4"
   },
   "scripts": {
