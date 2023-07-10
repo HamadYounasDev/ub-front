@@ -1,15 +1,20 @@
 import React, { useContext, useState } from "react";
-import Modal from "../Misc/Modal";
 import { MyContext } from "../../contexts/DestinationDetails";
 import SingleItem from "../Misc/SingleItem";
+import { useNavigate } from "react-router-dom";
 
 const FreelancerSelector = () => {
+  const navigate = useNavigate()
   const { selectedHotel, setSelectedFreelancer, destinationDetails, selectedFreelancer } = useContext(MyContext);
-  const [confirmationModal, setConfirmationModal] = useState(false);
   const handlerFreelancerSelection = (data) => {
     setSelectedFreelancer(data)
-    setConfirmationModal(true);
+    navigate('/planner')
   };
+
+
+
+
+
 
 
   return (
@@ -22,14 +27,14 @@ const FreelancerSelector = () => {
           {destinationDetails?.ACF?.related_freelancers?.map((item) => (
             <SingleItem
               key={item.id}
+              type='freelancer'
               handleItemSelection={handlerFreelancerSelection}
               data={item}
             />
           ))}
         </div>
       </div>
-
-      <Modal open={confirmationModal} setOpen={setConfirmationModal} />
+      
     </div>
   );
 };

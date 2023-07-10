@@ -27,6 +27,7 @@ const Homepage = () => {
       .catch((err) => {
         console.log(err);
       });
+
   }, []);
 
   return (
@@ -35,8 +36,8 @@ const Homepage = () => {
       <About />
       <Features />
       <Gallery />
-      <TopItems heading="Top Destinations" data={destinations} />
-      <TopItems heading="Top Freelancers" data={freelancers} />
+      {/* <TopItems heading="Top Destinations" data={destinations} price={null} subCat={null} />
+      <TopItems heading="Top Freelancers" data={freelancers} price={null} subCat={null}  /> */}
     </div>
   );
 };

@@ -2,8 +2,6 @@ import React from 'react'
 
 const FreelancerDetails = () => {
   return (
-    <div>
-
     <div className="bg-white">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
@@ -211,9 +209,6 @@ const FreelancerDetails = () => {
         </div>
       </div>
     </div>
-    
-    
-        </div>
   )
 }
 

@@ -11,6 +11,11 @@ import FreelancerDetails from "./components/BookingFlow/FreelancerDetails";
 import HotelSelector from "./components/BookingFlow/HotelSelector";
 import FreelancerSelector from "./components/BookingFlow/FreelancerSelector";
 import Fade from "./components/utils/Fade";
+import Register from "./components/Auth/Register";
+import Login from "./components/Auth/Login";
+import TourPlanner from "./components/TourPlanner/TourPlanner";
+import BlogDetail from "./components/Blog/BlogDetails";
+import Blogs from "./components/Blog/Blogs";
 
 const App = () => {
   return (
@@ -27,7 +32,11 @@ const App = () => {
           <Route path="/freelancer/:id" element={<FreelancerDetails />} />
           <Route path="/selecthotel" element={<HotelSelector />} />
           <Route path="/selectfreelancer" element={<FreelancerSelector />} />
-          <Route path="*" element={<Fade />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/planner" element={<TourPlanner />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogDetail" element={<BlogDetail />} />
         </Routes>
         <Footer />
       </div>
