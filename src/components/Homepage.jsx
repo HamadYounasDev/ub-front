@@ -21,7 +21,6 @@ const Homepage = () => {
     })
     axios.get('http://localhost/ub_back/wp-json/wp/v2/freelancer?per_page=4')
     .then((res)=>{
-      console.log(res.data)
       setFreelancers(res.data)
     })
     .catch((err)=>{
@@ -35,8 +34,8 @@ const Homepage = () => {
       <About />
       <Features />
       <Gallery />
-      <TopItems heading='Top Destinations' data={destinations} />
-      <TopItems heading='Top Freelancers' data={freelancers} />
+      <TopItems heading='Top Destinations' data={destinations} check="no" />
+      <TopItems heading='Top Freelancers' data={freelancers}  check="yes" />
     </div>
   );
 };

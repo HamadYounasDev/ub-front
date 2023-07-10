@@ -17,7 +17,7 @@ const DestinationListing = () => {
   return (
     <div>
         <HeroBanner />
-        <TopItems data={destinations} />    
+        <TopItems data={destinations} heading="Destinations" />    
     </div>
   )
 }

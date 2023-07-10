@@ -3,7 +3,7 @@ import React from "react";
 const HeroBanner = () => {
   return (
     <div>
-      <div className="bg-indigo-700">
+      <div className="flex flex-col justify-center bg-cover bg-no-repeat bg-center" style={{backgroundImage: "url('https://preview.colorlib.com/theme/trips/images/hero_1.jpg.webp')",filter: "brightness(120%)",backgroundPosition: "center center",zIndex: -1,height: "100vh"}}>
         <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
             <div className="flex flex-col mb-16 sm:text-center sm:mb-0">
@@ -25,7 +25,7 @@ const HeroBanner = () => {
                 </div>
               </a>
               <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
+                <h2 className="max-w-lg mb-6 font-serif text-4xl font-bold leading-none tracking-tight text-Black sm:text-5xl md:mx-auto">
                   <span className="relative inline-block">
                     <svg
                       viewBox="0 0 52 24"
@@ -49,19 +49,18 @@ const HeroBanner = () => {
                         height="24"
                       ></rect>
                     </svg>
-                    <span className="relative">The</span>
                   </span>
-                  quick, brown fox jumps over a lazy dog
+                  Quick and easy trip planner
                 </h2>
-                <p className="text-base text-indigo-100 md:text-lg">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque rem aperiam, eaque ipsa quae.
+                <p className="text-base font-sans text-black md:text-lg">
+                Pick a vibe and explore the top destinations all over the world. 
+                These popular destinations have a lot to offer
                 </p>
               </div>
               <div>
                 <a
                   href="/"
-                  className="inline-flex items-center justify-center h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-deep-purple-accent-100 focus:shadow-outline focus:outline-none"
+                  className="inline-flex bg-blue-500 text-white items-center hover:bg-blue-600 justify-center h-12 px-6 font-semibold tracking-wide text-teal-900 transition duration-200 rounded shadow-md hover:text-deep-blue-600 bg-teal-accent-400 hover:bg-deep-purple-accent-100 focus:shadow-outline focus:outline-none"
                 >
                   Get started
                 </a>
